@@ -1,0 +1,136 @@
+/* Basic styles */
+body {
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 150px; /* Adjusted margin to center content */
+}
+
+.box1, .box2 {
+    width: 300px;
+    height: 220px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.box1 {
+    background-color: white;
+}
+
+.box2 {
+    background-color: rgb(49, 143, 250);
+}
+
+/* Image, heading, city, and info positioning inside box1 */
+.box1 img {
+    margin-top: 10px;
+    height: 80px;
+    width: 80px;
+}
+
+.heading {
+    font-size: 24px;
+    color: #104baa;
+    margin: 0; /* Reset margin for consistent spacing */
+}
+
+.city {
+    color: #7f8083;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.info {
+    color: #7f8083;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Style input and button */
+input {
+    border-radius: 18px;
+    background-color: rgb(230, 230, 245);
+    border: solid 2px;
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    width: 60%;
+    border-radius: 18px;
+    height: 30px;
+    background-color: #3286da;
+    cursor: pointer;
+    color: black;
+}
+
+/* Responsive styling for screens with max width 575px */
+@media only screen and (max-width: 575px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+        max-width: 100%;
+        height: 100vh;
+        justify-content: center;
+    }
+
+    .box1, .box2 {
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .box1 img {
+        height: 60px;
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .city, .info {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    button {
+        width: 70%;
+    }
+}
